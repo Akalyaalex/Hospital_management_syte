@@ -4,7 +4,7 @@ To create a hospital management system using react, springboot and sql.
 ## PROGRAM:
 ```
 hospitalmanagement.java
-package com.HospitalManagement.hospitalmanagement.job;
+package com.HospitalManagement.hospitalmanagement.patient;
 import jakarta.persistence.*;
 import org.junit.platform.commons.annotation. Testable;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -15,18 +15,18 @@ import java.time.Period;
 public class HospitalManagementSystem {
 @Id
 @SequenceGenerator(
-name = "hospitalmanagement_sequence",
-sequenceName = "hospitalmanagement_sequence", allocationSize = 1
+name = "Hospitalmanagement_sequence",
+sequenceName = "Hospitalmanagement_sequence", allocationSize = 1
 @GeneratedValue(
 strategy GenerationType.SEQUENCE,
-generator = "hospitalmanagement_sequence"
+generator = "Hospitalmanagement_sequence"
 private Long PatientId;
 Create a job portal application using react,
 
-private String hospitalmanagementName;
+private String   HospitalmanagementName;
 @Transient private Integer PatientAge; private LocalDate PatientDob;
 private String patient Email;
-public hospitalmanagement() {}
+public Hospitalmanagement() {}
 public hospitalmanagement (Long patientId, String patient Name, LocalDate patient Dob, String
 job this.patientId = patientId; this.patientName patientName;
 this.patientDob patientDob;=
@@ -46,10 +46,10 @@ public LocalDate getpatientDob() { return patientDob;}
 public void setpatientDob (LocalDate patientDob) { patientDob patientDob; = }
 public String patientEmail() {
 return patientEmail;}
-public void setjobportal Email(String patient Email) { patientEmail patientEmail; = }
+public void Hospitalmanagementsystem Email(String patient Email) { patientEmail patientEmail; = }
 @Override
 public String toString() {
-return "hospitalmanagement{" +
+return "Hospitalmanagement{" +
 "patientId=" + patientId +
 ', patientName='" + patientname + '\'
 patientAge=" + patientAge +
@@ -68,14 +68,14 @@ App.js
 import React from "react"
 import './App.css';
 import { Browser Router as Router, Route, Routes, Link} from "react-router-dom";
-import hospitalmanagementComponent from
-'./components/hospitalmanagementComponent/hospitalmanagementComponent';
+import HospitalmanagementComponent from
+'./components/HospitalmanagementComponent/hospitalmanagementComponent';
 import HeaderComponent from
 "./components/HeaderComponent/HeaderComponent";
-import hospitalmanagementComponent from
-"./components/hospitalmanagementComponent/hospitalmanagementComponent"; import
+import HospitalmanagementComponent from
+"./components/HospitalmanagementComponent/hospitalmanagementComponent"; import
 hospitalmanagementComponent from "
-'./components/hospitalmanagementComponent/hospitalmanagementnComponent";
+'./components/HospitalmanagementComponent/hospitalmanagementnComponent";
 function App() {
 return (<Router>
 <div className="container"> <HeaderComponent/>
@@ -84,9 +84,9 @@ return (<Router>
 <Link to="/admin/add" >Add Member</Link>
 <Link to="/admin/delete" >Delete Member</Link></nav>
 <Routes>
-<Route exact path='/' element={<hospitalmanagementComponent/>}></Route>
-<Route path='/admin/add' element={<hospitalmanagementComponent/>}></Route> <Route
-path='/admin/delete' element={<hospitalmanagementComponent/>}></Route>
+<Route exact path='/' element={<HospitalmanagementComponent/>}></Route>
+<Route path='/admin/add' element={<HospitalmanagementComponent/>}></Route> <Route
+path='/admin/delete' element={<HospitalmanagementComponent/>}></Route>
 </Routes>
 </div>
 </Router>);}
